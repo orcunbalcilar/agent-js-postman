@@ -1,4 +1,4 @@
-# orcunbalcilar/newman-reporter-agent-js-postman
+# @orcunbalcilar/newman-reporter-agent-js-postman
 
 This package is a fork of [@reportportal/agent-js-postman](https://github.com/reportportal/agent-js-postman).
 
@@ -18,12 +18,12 @@ The installation should be global if newman is installed globally, otherwise - l
 
 For global installation:
 ```cmd
-npm install -g orcunbalcilar/newman-reporter-agent-js-postman
+npm install -g @orcunbalcilar/newman-reporter-agent-js-postman
 ```
 
 For local installation:
 ```cmd
-npm install --save-dev orcunbalcilar/newman-reporter-agent-js-postman
+npm install --save-dev @orcunbalcilar/newman-reporter-agent-js-postman
 ```
 
 ### Usage
@@ -36,7 +36,7 @@ To enable this reporter you have to specify `agent-js-postman` in Newman's `-r` 
 
 ```cmd
 newman run https://postman-echo.com/status/200 \
-  -r orcunbalcilar/agent-js-postman \
+  -r @orcunbalcilar/agent-js-postman \
   --reporter-@reportportal/agent-js-postman-debug=true \
   --reporter-@reportportal/agent-js-postman-endpoint=https://your-instance.com:8080/api/v1 \
   --reporter-@reportportal/agent-js-postman-api-key=reportportalApiKey \
@@ -57,9 +57,9 @@ const newman = require("newman");
 newman.run(
     {
         collection: "./collections/newman-test_collection.json",
-        reporters: "orcunbalcilar/agent-js-postman",
+        reporters: "@orcunbalcilar/agent-js-postman",
         reporter: {
-            "orcunbalcilar/agent-js-postman": {
+            "@orcunbalcilar/agent-js-postman": {
                 apiKey: "<API_KEY>",
                 endpoint: "https://your.reportportal.server/api/v1",
                 project: "Your reportportal project name",
