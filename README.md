@@ -16,6 +16,12 @@ Agent to integrate Postman (based on Newman collection runner) with ReportPortal
 ### How to use
 The installation should be global if newman is installed globally, otherwise - local (replace -g from the command below with -S for a local installation).
 
+For global installation:
+```cmd
+npm install -g @orcunbalcilar/newman-reporter-agent-js-postman
+```
+
+For local installation:
 ```cmd
 npm install --save-dev @orcunbalcilar/newman-reporter-agent-js-postman
 ```
@@ -30,7 +36,7 @@ To enable this reporter you have to specify `agent-js-postman` in Newman's `-r` 
 
 ```cmd
 newman run https://postman-echo.com/status/200 \
-  -r @reportportal/agent-js-postman \
+  -r @orcunbalcilar/agent-js-postman \
   --reporter-@reportportal/agent-js-postman-debug=true \
   --reporter-@reportportal/agent-js-postman-endpoint=https://your-instance.com:8080/api/v1 \
   --reporter-@reportportal/agent-js-postman-api-key=reportportalApiKey \
@@ -51,9 +57,9 @@ const newman = require("newman");
 newman.run(
     {
         collection: "./collections/newman-test_collection.json",
-        reporters: "@reportportal/agent-js-postman",
+        reporters: "@orcunbalcilar/agent-js-postman",
         reporter: {
-            "@reportportal/agent-js-postman": {
+            "@orcunbalcilar/agent-js-postman": {
                 apiKey: "<API_KEY>",
                 endpoint: "https://your.reportportal.server/api/v1",
                 project: "Your reportportal project name",
@@ -210,6 +216,55 @@ For both tests or steps, this is true
 | namespace  | true     | "string" - namespace, must be equal to the *rp.testCaseId* | "rp.testCaseId"  |
 | testCaseId | true     | "string" - test case id value                              | "yourTestCaseId" |
 
+### Enhanced Folder Structure Support
+
+This fork adds native support for Postman's folder structure in ReportPortal. When using this reporter:
+
+1. Each Postman folder is represented as a separate suite in ReportPortal
+2. Nested folders maintain their hierarchy, appearing as nested suites in ReportPortal
+3. Requests within folders are properly associated with their parent folder
+4. Folder descriptions and attributes are preserved in the ReportPortal UI
+
+This enhancement provides a more intuitive representation of your Postman collection structure in ReportPortal, making test results easier to navigate and understand.
+
+### Improved Request/Response Logging
+
+This fork includes significant improvements to request and response logging:
+
+1. **Better HTML Escaping**: Special characters in logs are now properly escaped, preventing rendering issues in the ReportPortal UI
+2. **More Reliable Log Collection**: Logs are now collected and associated with the proper test item more reliably
+3. **Enhanced Log Sequence**: Request and response logs appear in a more logical sequence, making it easier to follow the request flow
+
+These improvements make debugging API responses much more reliable, especially when responses contain HTML, XML, or special characters.
+
+# Version History
+
+## 5.1.1 (2025)
+* First release of the forked package
+* Enhanced folder suite handling: Added support for properly representing Postman folder structure in ReportPortal
+* Improved request/response logging with better HTML escaping for safer log viewing
+* Fixed log collection and reporting sequence for more reliable test results
+* Updated package identifiers to reflect new ownership
+* Fixed licensing and attribution according to Apache 2.0 requirements
+
 # Copyright Notice
 Licensed under the [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0.html)
-license (see the LICENSE.txt file).
+license (see the LICENSE.md file).
+
+## Fork Information
+
+This fork is maintained by [Orçun Balcılar](https://github.com/orcunbalcilar) and is available on:
+* GitHub: https://github.com/orcunbalcilar/agent-js-postman
+* npm: https://www.npmjs.com/package/@orcunbalcilar/newman-reporter-agent-js-postman
+
+### Why This Fork?
+
+This fork was created to provide:
+- Ongoing maintenance for the ReportPortal integration with Postman/Newman
+- Improved documentation and examples
+- Bug fixes and enhancements
+- Compatibility with the latest versions of Newman and ReportPortal
+
+### Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request or create an issue on the [GitHub repository](https://github.com/orcunbalcilar/agent-js-postman).
