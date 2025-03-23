@@ -1,8 +1,8 @@
-@orcunbalcilar/newman-reporter-agent-js-postman
+orcunbalcilar/newman-reporter-agent-js-postman
 Copyright (c) 2025 Orçun Balcılar
 
 This product is a fork of @reportportal/agent-js-postman
 Original work Copyright 2020 EPAM Systems
 
 This product includes software developed by EPAM Systems (https://github.com/reportportal/agent-js-postman).
-Modifications made by Orçun Balcılar (https://github.com/orcunbalcilar/agent-js-postman). 
+Modifications made by Orçun Balcılar (https://github.com/orcunbalcilar/agent-js-postman).
