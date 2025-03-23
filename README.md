@@ -1,4 +1,12 @@
-# @reportportal/agent-js-postman
+# @orcunbalcilar/newman-reporter-agent-js-postman
+
+This package is a fork of [@reportportal/agent-js-postman](https://github.com/reportportal/agent-js-postman). 
+
+## Original Project Attribution
+The original work is by ReportPortal.io and is licensed under the Apache 2.0 license.
+* Original repository: https://github.com/reportportal/agent-js-postman
+
+---
 
 Agent to integrate Postman (based on Newman collection runner) with ReportPortal.
 * More about [Postman](https://www.postman.com/)
@@ -9,7 +17,7 @@ Agent to integrate Postman (based on Newman collection runner) with ReportPortal
 The installation should be global if newman is installed globally, otherwise - local (replace -g from the command below with -S for a local installation).
 
 ```cmd
-npm install --save-dev @reportportal/newman-reporter-agent-js-postman
+npm install --save-dev @orcunbalcilar/newman-reporter-agent-js-postman
 ```
 
 ### Usage

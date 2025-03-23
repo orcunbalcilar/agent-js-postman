@@ -1,9 +1,9 @@
 {
-  "name": "@reportportal/newman-reporter-agent-js-postman",
+  "name": "@orcunbalcilar/newman-reporter-agent-js-postman",
   "version": "5.1.1",
-  "description": "ReportPortal reporter for newman",
+  "description": "ReportPortal reporter for newman - Forked from the original agent-js-postman",
   "main": "./lib/index.js",
-  "author": "ReportPortal.io",
+  "author": "Orçun Balcılar <orcunbalcilar@gmail.com>",
   "license": "Apache-2.0",
   "scripts": {
     "lint": "eslint .",
@@ -39,12 +39,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/reportportal/agent-js-postman.git"
+    "url": "git+https://github.com/orcunbalcilar/agent-js-postman.git"
   },
   "bugs": {
-    "url": "https://github.com/reportportal/agent-js-postman/issues"
+    "url": "https://github.com/orcunbalcilar/agent-js-postman/issues"
   },
-  "homepage": "https://github.com/reportportal/agent-js-postman",
+  "homepage": "https://github.com/orcunbalcilar/agent-js-postman",
   "keywords": [
     "reportportal",
     "reporters",
@@ -56,6 +56,10 @@
     {
       "name": "Ilya Koshaleu",
       "email": ""
+    },
+    {
+      "name": "Orçun Balcılar",
+      "email": "orcunbalcilar@gmail.com"
     }
   ]
 }
